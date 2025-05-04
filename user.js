@@ -65,6 +65,15 @@ user_pref("gfx.webrender.force-partial-present", true);
 
 // Включить последовательное отображение кадров в WebRender для уменьшения мерцания и улучшения стабильности
 user_pref("gfx.webrender.flip-sequential", true);
+
+// Убрать задержку первой отрисовки страниц
+user_pref("nglayout.initialpaint.delay", 0);
+user_pref("nglayout.initialpaint.delay_in_oopif", 0);
+
+// Уменьшить интервал между отрисовками
+user_pref("content.notify.ontimer", true);
+user_pref("content.notify.interval", 100000);
+user_pref("content.notify.backoffcount", -1);
 //-----------------------------------------------------------------------------------------------------------
 // Настройка JavaScript
 
