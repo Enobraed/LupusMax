@@ -1,0 +1,14 @@
+{
+    "policies": {
+        "DisableAppUpdate": true,
+        "DisableSystemAddonUpdate": false,
+        "DisableProfileImport": false,
+        "DisableFirefoxStudies": true,
+        "DisableTelemetry": true,
+        "DisableFeedbackCommands": true,
+        "DisablePocket": true,
+        "DisableSetDesktopBackground": false,
+        "DisableDeveloperTools": false,
+        "NoDefaultBookmarks": true,
+    }
+}
