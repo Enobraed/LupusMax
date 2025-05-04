@@ -78,7 +78,8 @@ curl -L -o "%librewolf%\distribution\policies.json" "https://raw.githubuserconte
 curl -L -o "%pf%\user.js" "https://raw.githubusercontent.com/Enobraed/LupusMax/main/user.js" >nul 2>&1
 
 :: Обновление файла userChrome.css
-curl -L -o "%pf%\chrome\user.js" "https://raw.githubusercontent.com/Enobraed/LupusMax/main/userChrome.css" >nul 2>&1
+if not exist "%pf%\chrome" mkdir "%pf%\chrome"
+curl -L -o "%pf%\chrome\userChrome.css" "https://raw.githubusercontent.com/Enobraed/LupusMax/main/userChrome.css" >nul 2>&1
 
 :: Очистка временных директорий профиля
 for %%d in (
