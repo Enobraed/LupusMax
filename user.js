@@ -166,3 +166,159 @@ user_pref("dom.vr.require-gesture", false);
 user_pref("dom.vr.webxr.enabled", false);
 user_pref("dom.vr.webxr.quantization", "0");
 //-----------------------------------------------------------------------------------------------------------
+// Отключить небезопасные функции
+
+// Отключить геолокацию
+user_pref("browser.geolocation.warning.infoURL", "");
+user_pref("geo.enabled", false);
+user_pref("geo.provider.ms-windows-location", false);
+user_pref("geo.provider.network.timeout", 0);
+user_pref("geo.provider.network.timeToWaitBeforeSending", 0);
+user_pref("geo.provider.network.url", "");
+user_pref("geo.provider.use_corelocation", false);
+user_pref("geo.provider.use_geoclue", false);
+user_pref("geo.provider.use_gpsd", false);
+user_pref("geo.timeout", 0);
+user_pref("permissions.default.geo", 2);
+
+// Отключить замену запрошенных страниц на страницу провайдера
+user_pref("captivedetect.canonicalContent", "");
+user_pref("captivedetect.canonicalURL", "");
+user_pref("captivedetect.maxRetryCount", 0);
+user_pref("captivedetect.maxWaitingTime", 0);
+user_pref("captivedetect.pollingTime", 0);
+user_pref("network.captive-portal-service.backoffFactor", "");
+user_pref("network.captive-portal-service.enabled", false);
+user_pref("network.captive-portal-service.maxInterval", 0);
+user_pref("network.captive-portal-service.minInterval", 0);
+
+// Отключить push-уведомления
+user_pref("dom.push.connection.enabled", false);
+user_pref("dom.push.enabled", false);
+user_pref("dom.push.loglevel", "");
+user_pref("dom.push.maxQuotaPerSubscription", 0);
+user_pref("dom.push.maxRecentMessageIDsPerSubscription", 0);
+user_pref("dom.push.pingInterval", 0);
+user_pref("dom.push.quotaUpdateDelay", 0);
+user_pref("dom.push.requestTimeout", 0);
+user_pref("dom.push.retryBaseInterval", 0);
+user_pref("dom.push.serverURL", "");
+user_pref("dom.push.userAgentID", "");
+user_pref("dom.serviceWorkers.enabled", false);
+user_pref("dom.webnotifications.enabled", false);
+user_pref("permissions.default.desktop-notification", 2);
+user_pref("permissions.desktop-notification.notNow.enabled", false);
+user_pref("permissions.desktop-notification.postPrompt.enabled", false);
+
+// Удалить права, установленные по умолчанию (закрыть возможность чтения некоторых данных из раздела "about:support")
+user_pref("permissions.manager.defaultsUrl", "");
+
+// Отключить WebRTC
+user_pref("media.peerconnection.default_iceservers", "[]");
+user_pref("media.peerconnection.enabled", false);
+user_pref("media.peerconnection.ice.default_address_only", true);
+user_pref("media.peerconnection.ice.no_host", true);
+user_pref("media.peerconnection.ice.relay_only", true);
+user_pref("media.peerconnection.ice.tcp", false);
+user_pref("media.peerconnection.ice.tcp_so_sock_count", 0);
+user_pref("media.peerconnection.turn.disable", true);
+user_pref("media.peerconnection.use_document_iceservers", false);
+
+// Отключить IPv6
+user_pref("network.connectivity-service.IPv6.url", "");
+user_pref("network.dns.disableIPv6", true);
+user_pref("network.dns.preferIPv6", false);
+user_pref("network.http.http3.block_loopback_ipv6_addr", false);
+user_pref("network.notify.IPv6", false);
+
+// Отключить Web Audio API (требуется для некоторых игр)
+user_pref("dom.webaudio.enabled", false);
+
+// Отключить распознавание речи
+user_pref("media.webspeech.recognition.enable", false);
+user_pref("media.webspeech.recognition.force_enable", false);
+user_pref("media.webspeech.synth.enabled", false);
+user_pref("media.webspeech.synth.force_global_queue", false);
+user_pref("media.webspeech.test.enable", false);
+user_pref("media.webspeech.test.fake_fsm_events", false);
+user_pref("media.webspeech.test.fake_recognition_service", false);
+
+// Запрет на просмотр PDF-документов с помощью браузера (с использованием HTML5)
+user_pref("browser.download.open_pdf_attachments_inline", false);
+user_pref("browser.helperApps.showOpenOptionForPdfJS", false);
+user_pref("browser.pdf.launchDefaultEdgeAsApp", false);
+user_pref("browser.pdfjs.feature-tour", "");
+user_pref("browser.shell.checkDefaultPDF", false);
+user_pref("browser.shell.checkDefaultPDF.silencedByUser", false);
+user_pref("browser.shell.setDefaultPDFHandler", false);
+user_pref("browser.shell.setDefaultPDFHandler.onlyReplaceBrowsers", false);
+user_pref("pdfjs.annotationEditorMode", 0);
+user_pref("pdfjs.annotationMode", 0);
+user_pref("pdfjs.cursorToolOnLoad", 0);
+user_pref("pdfjs.defaultZoomDelay", 0);
+user_pref("pdfjs.defaultZoomValue", "");
+user_pref("pdfjs.disableAutoFetch", true);
+user_pref("pdfjs.disabled", true);
+user_pref("pdfjs.disableFontFace", true);
+user_pref("pdfjs.disablePageLabels", true);
+user_pref("pdfjs.disableRange", true);
+user_pref("pdfjs.disableStream", true);
+user_pref("pdfjs.enabledCache.state", false);
+user_pref("pdfjs.enableHighlightEditor", false);
+user_pref("pdfjs.enableHighlightFloatingButton", false);
+user_pref("pdfjs.enableML", false);
+user_pref("pdfjs.enablePermissions", false);
+user_pref("pdfjs.enablePrintAutoRotate", false);
+user_pref("pdfjs.enableScripting", false);
+user_pref("pdfjs.enableStampEditor", false);
+user_pref("pdfjs.enableXfa", false);
+user_pref("pdfjs.externalLinkTarget", 0);
+user_pref("pdfjs.forcePageColors", false);
+user_pref("pdfjs.handleOctetStream", false);
+user_pref("pdfjs.highlightEditorColors", "");
+user_pref("pdfjs.historyUpdateUrl", false);
+user_pref("pdfjs.ignoreDestinationZoom", false);
+user_pref("pdfjs.migrationVersion", 0);
+user_pref("pdfjs.pageColorsBackground", "");
+user_pref("pdfjs.pageColorsForeground", "");
+user_pref("pdfjs.pdfBugEnabled", false);
+user_pref("pdfjs.previousHandler.alwaysAskBeforeHandling", false);
+user_pref("pdfjs.previousHandler.preferredAction", 0);
+user_pref("pdfjs.scrollModeOnLoad", 0);
+user_pref("pdfjs.sidebarViewOnLoad", 0);
+user_pref("pdfjs.spreadModeOnLoad", 0);
+user_pref("pdfjs.textLayerMode", 0);
+user_pref("pdfjs.viewOnLoad", 0);
+user_pref("print.save_as_pdf.internal_destinations.enabled", false);
+user_pref("print.save_as_pdf.links.enabled", false);
+user_pref("print.save_as_pdf.use_page_rule_size_as_paper_size.enabled", false);
+
+// Запретить использование API блокировки экрана
+user_pref("permissions.default.screen-wake-lock", 2);
+
+// Блокировать автоматическое воспроизведение аудио и видео
+user_pref("media.autoplay.default", 5);
+
+// Настройки поиска (отключение всех возможных подсказок и т.д.)
+user_pref("browser.search.context.loadInBackground", false);
+user_pref("browser.search.log", false);
+user_pref("browser.search.openintab", false);
+user_pref("browser.search.param.search_rich_suggestions", "");
+user_pref("browser.search.removeEngineInfobar.enabled", false);
+user_pref("browser.search.searchEnginesURL", "");
+user_pref("browser.search.separatePrivateDefault", false);
+user_pref("browser.search.separatePrivateDefault.ui.banner.max", 0);
+user_pref("browser.search.separatePrivateDefault.ui.enabled", false);
+user_pref("browser.search.serpEventTelemetry.enabled", false);
+user_pref("browser.search.serpEventTelemetryCategorization.enabled", false);
+user_pref("browser.search.suggest.enabled", false);
+user_pref("browser.search.suggest.enabled.private", false);
+user_pref("browser.search.update", false);
+user_pref("browser.search.widget.removeAfterDaysUnused", 0);
+
+// Отключить совместное использование экрана
+user_pref("media.getusermedia.screensharing.enabled", false);
+
+// Отключить возможность захвата содержимого экрана или его частей
+user_pref("media.getdisplaymedia.enabled", false);
+user_pref("media.getdisplaymedia.previews.enabled", false);
