@@ -26,7 +26,7 @@ LupusMax/
 │
 ├── policies.json          # Настройки политики LibreWolf
 │
-├── user.js                # Основные предпочтения пользователя
+├── user.js                # Основные настройки
 │
 ├── userChrome.css         # Скрывает кнопку "все вкладки" (All Tabs Button)
 │
