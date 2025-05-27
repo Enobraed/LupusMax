@@ -12,9 +12,6 @@ user_pref("browser.uidensity", 1);
 user_pref("browser.tabs.warnOnClose", true);
 user_pref("browser.tabs.warnOnCloseOtherTabs", true);
 
-// Включить поиск текста на странице по мере его ввода
-user_pref("accessibility.typeaheadfind", true);
-
 // Отключить добавление списка загруженных файлов в список "Последние документы"
 user_pref("browser.download.manager.addToRecentDocs", false);
 
@@ -320,8 +317,8 @@ user_pref("browser.search.separatePrivateDefault.ui.banner.max", 0);
 user_pref("browser.search.separatePrivateDefault.ui.enabled", false);
 user_pref("browser.search.serpEventTelemetry.enabled", false);
 user_pref("browser.search.serpEventTelemetryCategorization.enabled", false);
-user_pref("browser.search.suggest.enabled", false);
-user_pref("browser.search.suggest.enabled.private", false);
+//user_pref("browser.search.suggest.enabled", false);
+//user_pref("browser.search.suggest.enabled.private", false);
 user_pref("browser.search.update", false);
 user_pref("browser.search.widget.removeAfterDaysUnused", 0);
 
