@@ -8,7 +8,7 @@
         "DisableFeedbackCommands": true,
         "DisablePocket": true,
         "DisableSetDesktopBackground": false,
-        "DisableDeveloperTools": false,
+        "DisableDeveloperTools": true,
         "NoDefaultBookmarks": true,
     }
 }
