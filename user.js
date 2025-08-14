@@ -63,6 +63,9 @@ user_pref("gfx.webrender.force-partial-present", true);
 // Включить последовательное отображение кадров в WebRender для уменьшения мерцания и улучшения стабильности
 user_pref("gfx.webrender.flip-sequential", true);
 
+// Отключить цветокоррекцию
+user_pref("gfx.color_management.mode", true);
+
 // Убрать задержку первой отрисовки страниц
 user_pref("nglayout.initialpaint.delay", 0);
 user_pref("nglayout.initialpaint.delay_in_oopif", 0);
