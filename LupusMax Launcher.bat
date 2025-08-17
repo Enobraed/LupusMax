@@ -50,25 +50,25 @@ for %%d in (
 
 @echo 5. Удаление ненужных файлов LibreWolf после обновления
 for %%f in (
-    AccessibleMarshal.dll
-    application.ini
-    dxcompiler.dll
-    firefox.VisualElementsManifest.xml
-    InstallationDirLayout.dll
-    libEGL.dll
-    libGLESv2.dll
-    msvcp140.dll
-    nmhproxy.exe
-    notificationserver.dll
-    pingsender.exe
-    platform.ini
-    plugin-container.exe
-    precomplete
-    private_browsing.exe
-    private_browsing.VisualElementsManifest.xml
-    removed-files
-    vcruntime140.dll
-    vcruntime140_1.dll
+    "AccessibleMarshal.dll"
+    "application.ini"
+    "dxcompiler.dll"
+    "firefox.VisualElementsManifest.xml"
+    "InstallationDirLayout.dll"
+    "libEGL.dll"
+    "libGLESv2.dll"
+    "msvcp140.dll"
+    "nmhproxy.exe"
+    "notificationserver.dll"
+    "pingsender.exe"
+    "platform.ini"
+    "plugin-container.exe"
+    "precomplete"
+    "private_browsing.exe"
+    "private_browsing.VisualElementsManifest.xml"
+    "removed-files"
+    "vcruntime140.dll"
+    "vcruntime140_1.dll"
 ) do del /f /q "%librewolf%\%%f" >nul 2>&1
 
 @echo 6. Удаление мусора от WinUpdater после обновления
@@ -87,19 +87,19 @@ curl -L -o "%pf%\chrome\userChrome.css" "https://raw.githubusercontent.com/Enobr
 
 @echo 10. Очистка временных директорий профиля
 for %%d in (
-    bookmarkbackups
-    cache2
-    crashes
-    datareporting
-    jumpListCache
-    minidumps
-    saved-telemetry-pings
-    sessionstore-backups
-    sessionstore-logs
-    shader-cache
-    shortcutCache
-    startupCache
-    thumbnails
+    "bookmarkbackups"
+    "cache2"
+    "crashes"
+    "datareporting"
+    "jumpListCache"
+    "minidumps"
+    "saved-telemetry-pings"
+    "sessionstore-backups"
+    "sessionstore-logs"
+    "shader-cache"
+    "shortcutCache"
+    "startupCache"
+    "thumbnails"
 ) do rd /s /q "%pf%\%%d" >nul 2>&1
 
 @echo 11. Очистка временных файлов сайтов
