@@ -42,6 +42,7 @@ taskkill /f /im LibreWolf-WinUpdater.exe >nul 2>&1
 for %%d in (
     browser\VisualElements
     defaults
+    desktop-launcher
     fonts
     gmp-clearkey
     installation_dir_layout
@@ -52,11 +53,20 @@ for %%d in (
 for %%f in (
     "AccessibleMarshal.dll"
     "application.ini"
+    "CoreMessagingXP.dll"
     "dxcompiler.dll"
     "firefox.VisualElementsManifest.xml"
     "InstallationDirLayout.dll"
     "libEGL.dll"
     "libGLESv2.dll"
+    "marshal.dll"
+    "Microsoft.InputStateManager.dll"
+    "Microsoft.Internal.FrameworkUdk.dll"
+    "Microsoft.UI.Composition.OSSupport.dll"
+    "Microsoft.UI.Input.dll"
+    "Microsoft.UI.Windowing.Core.dll"
+    "Microsoft.UI.Windowing.dll"
+    "mozinference.dll"
     "msvcp140.dll"
     "nmhproxy.exe"
     "notificationserver.dll"
