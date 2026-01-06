@@ -44,8 +44,6 @@ for %%d in (
     defaults
     desktop-launcher
     fonts
-    gmp-clearkey
-    installation_dir_layout
     uninstall
 ) do rd /s /q "%librewolf%\%%d" >nul 2>&1
 
@@ -54,11 +52,7 @@ for %%f in (
     "AccessibleMarshal.dll"
     "application.ini"
     "CoreMessagingXP.dll"
-    "dxcompiler.dll"
     "firefox.VisualElementsManifest.xml"
-    "InstallationDirLayout.dll"
-    "libEGL.dll"
-    "libGLESv2.dll"
     "marshal.dll"
     "Microsoft.InputStateManager.dll"
     "Microsoft.Internal.FrameworkUdk.dll"
@@ -67,7 +61,6 @@ for %%f in (
     "Microsoft.UI.Windowing.Core.dll"
     "Microsoft.UI.Windowing.dll"
     "mozinference.dll"
-    "msvcp140.dll"
     "nmhproxy.exe"
     "notificationserver.dll"
     "pingsender.exe"
@@ -77,8 +70,6 @@ for %%f in (
     "private_browsing.exe"
     "private_browsing.VisualElementsManifest.xml"
     "removed-files"
-    "vcruntime140.dll"
-    "vcruntime140_1.dll"
 ) do del /f /q "%librewolf%\%%f" >nul 2>&1
 
 @echo 6. Удаление мусора от WinUpdater после обновления
