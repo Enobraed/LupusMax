@@ -33,20 +33,8 @@ user_pref("full-screen-api.warning.delay", 0);
 //-----------------------------------------------------------------------------------------------------------
 // Рендеринг страниц
 
-// Включить WebRender — рендеринг страниц с ускорением через GPU
-user_pref("gfx.webrender.all", true);
-
-// Принудительно включить аппаратное ускорение слоёв
-user_pref("layers.acceleration.force-enabled", true);
-
 // Включить аппаратное ускорение декодирования видео
 user_pref("media.hardware-video-decoding.force-enabled", true);
-
-// Принудительно включает отдельный compositor-процесс WebRender
-user_pref("gfx.webrender.compositor.force-enabled", true);
-
-// Включить принудительное очистку кэша для отсеченных областей в WebRender
-user_pref("gfx.webrender.scissored-cache-clears.force-enabled", true);
 
 // Включить принудительную поддержку субпиксельной антиалиасинга, где это возможно, для улучшения качества изображения
 user_pref("gfx.webrender.quality.force-subpixel-aa-where-possible", true);
@@ -56,12 +44,6 @@ user_pref("gfx.webrender.precache-shaders", true);
 
 // Включить использование Pixel Buffer Object (PBO) для загрузки текстур и данных в WebRender
 user_pref("gfx.webrender.pbo-uploads", true);
-
-// Включить принудительное использование частичного представления (partial present) для улучшения производительности
-user_pref("gfx.webrender.force-partial-present", true);
-
-// Включить последовательное отображение кадров в WebRender для уменьшения мерцания и улучшения стабильности
-user_pref("gfx.webrender.flip-sequential", true);
 
 // Отключить цветокоррекцию
 user_pref("gfx.color_management.mode", true);
