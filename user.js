@@ -37,25 +37,24 @@ user_pref("full-screen-api.warning.delay", 0);
 user_pref("media.hardware-video-decoding.force-enabled", true);
 
 // Включить принудительную поддержку субпиксельной антиалиасинга, где это возможно, для улучшения качества изображения
-user_pref("gfx.webrender.quality.force-subpixel-aa-where-possible", true);
+//user_pref("gfx.webrender.quality.force-subpixel-aa-where-possible", true);
 
 // Включить предварительную загрузку шейдеров для WebRender для повышения производительности
-user_pref("gfx.webrender.precache-shaders", true);
+//user_pref("gfx.webrender.precache-shaders", true);
 
 // Включить использование Pixel Buffer Object (PBO) для загрузки текстур и данных в WebRender
-user_pref("gfx.webrender.pbo-uploads", true);
+//user_pref("gfx.webrender.pbo-uploads", true);
 
 // Отключить цветокоррекцию
-user_pref("gfx.color_management.mode", true);
+//user_pref("gfx.color_management.mode", true); !!!!!!!!!!!!!!!!!!!!!!!!!
 
 // Убрать задержку первой отрисовки страниц
-user_pref("nglayout.initialpaint.delay", 0);
-user_pref("nglayout.initialpaint.delay_in_oopif", 0);
+//user_pref("nglayout.initialpaint.delay", 0);
+//user_pref("nglayout.initialpaint.delay_in_oopif", 0);
 
 // Уменьшить интервал между отрисовками
-user_pref("content.notify.ontimer", true);
-user_pref("content.notify.interval", 100000);
-user_pref("content.notify.backoffcount", -1);
+//user_pref("content.notify.ontimer", true);
+//user_pref("content.notify.interval", 100000);
 //-----------------------------------------------------------------------------------------------------------
 // Настройка JavaScript
 
@@ -221,9 +220,6 @@ user_pref("network.dns.disableIPv6", true);
 user_pref("network.dns.preferIPv6", false);
 user_pref("network.http.http3.block_loopback_ipv6_addr", false);
 user_pref("network.notify.IPv6", false);
-
-// Отключить Web Audio API (требуется для некоторых игр)
-user_pref("dom.webaudio.enabled", false);
 
 // Отключить распознавание речи
 user_pref("media.webspeech.recognition.enable", false);
