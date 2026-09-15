@@ -40,32 +40,37 @@ taskkill /f /im LibreWolf-WinUpdater.exe >nul 2>&1
 
 @echo 4. Удаление ненужных папок LibreWolf после обновления
 for %%d in (
+    browser\components
     browser\VisualElements
     defaults
     desktop-launcher
     fonts
+    installation_dir_layout
     uninstall
+for %%d in (
+
 ) do rd /s /q "%librewolf%\%%d" >nul 2>&1
 
 @echo 5. Удаление ненужных файлов LibreWolf после обновления
 for %%f in (
+	"browser\blank.pdf"
+	"browser\confused_fox.pdf"
     "AccessibleMarshal.dll"
     "application.ini"
     "CoreMessagingXP.dll"
     "firefox.VisualElementsManifest.xml"
+    "InstallationDirLayout.dll"
     "marshal.dll"
-    "Microsoft.InputStateManager.dll"
+	"Microsoft.InputStateManager.dll"
     "Microsoft.Internal.FrameworkUdk.dll"
     "Microsoft.UI.Composition.OSSupport.dll"
     "Microsoft.UI.Input.dll"
     "Microsoft.UI.Windowing.Core.dll"
     "Microsoft.UI.Windowing.dll"
-    "mozinference.dll"
+	"mozinference.dll"
     "nmhproxy.exe"
     "notificationserver.dll"
-    "pingsender.exe"
-    "platform.ini"
-    "plugin-container.exe"
+	"platform.ini"	
     "precomplete"
     "private_browsing.exe"
     "private_browsing.VisualElementsManifest.xml"
@@ -75,18 +80,14 @@ for %%f in (
 @echo 6. Удаление мусора от WinUpdater после обновления
 del /f /q "%base%ScheduledTask-Create.ps1" "%base%ScheduledTask-Remove.ps1" >nul 2>&1
 
-@echo 7. Обновление файла policies.json
-if not exist "%librewolf%\distribution" mkdir "%librewolf%\distribution"
-curl -L -o "%librewolf%\distribution\policies.json" "https://raw.githubusercontent.com/Enobraed/LupusMax/main/policies.json" >nul 2>&1
-
-@echo 8. Обновление файла user.js
+@echo 7. Обновление файла user.js
 curl -L -o "%pf%\user.js" "https://raw.githubusercontent.com/Enobraed/LupusMax/main/user.js" >nul 2>&1
 
-@echo 9. Обновление файла userChrome.css
+@echo 8. Обновление файла userChrome.css
 if not exist "%pf%\chrome" mkdir "%pf%\chrome"
 curl -L -o "%pf%\chrome\userChrome.css" "https://raw.githubusercontent.com/Enobraed/LupusMax/main/userChrome.css" >nul 2>&1
 
-@echo 10. Очистка временных директорий профиля
+@echo 9. Очистка временных директорий профиля
 for %%d in (
     "bookmarkbackups"
     "cache2"
@@ -103,16 +104,16 @@ for %%d in (
     "thumbnails"
 ) do rd /s /q "%pf%\%%d" >nul 2>&1
 
-@echo 11. Очистка временных файлов сайтов
+@echo 10. Очистка временных файлов сайтов
 for /d %%i in ("%pf%\storage\default\https*") do rd /s /q "%%i" >nul 2>&1
 
-@echo 12. Удаление пустых папок
+@echo 11. Удаление пустых папок
 for /f "delims=" %%d in ('dir "%base%" /ad /b /s ^| sort /r') do rd "%%d" 2>nul
 
-@echo 13. Удаление пустых файлов
+@echo 12. Удаление пустых файлов
 for /r "%base%" %%f in (*) do if %%~zf==0 del /f /q "%%f" >nul 2>&1
 
-@echo 14. Запуск LibreWolf
+@echo 13. Запуск LibreWolf
 start "" "%base%LibreWolf-Portable.exe" -no-deelevate -purgecaches >nul 2>&1
 
 timeout /t "3" /nobreak >nul
