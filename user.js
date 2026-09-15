@@ -30,6 +30,9 @@ user_pref("full-screen-api.transition-duration.leave", "0");
 user_pref("full-screen-api.transition.timeout", 0);
 user_pref("full-screen-api.warning.timeout", 0);
 user_pref("full-screen-api.warning.delay", 0);
+
+// Отключить Отображать предпросмотр изображения при наведении на вкладку
+user_pref("browser.tabs.hoverPreview.showThumbnails", false);
 //-----------------------------------------------------------------------------------------------------------
 // Рендеринг страниц
 
@@ -46,7 +49,7 @@ user_pref("media.hardware-video-decoding.force-enabled", true);
 //user_pref("gfx.webrender.pbo-uploads", true);
 
 // Отключить цветокоррекцию
-//user_pref("gfx.color_management.mode", true); !!!!!!!!!!!!!!!!!!!!!!!!!
+//user_pref("gfx.color_management.mode", true);
 
 // Убрать задержку первой отрисовки страниц
 //user_pref("nglayout.initialpaint.delay", 0);
